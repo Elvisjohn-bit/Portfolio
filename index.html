@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elvis - Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <h1>Elvis</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">My Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Homepage Section -->
+  <section id="home" class="home-section">
+    <div class="intro">
+      <h2>Welcome to My Portfolio</h2>
+      <p>I am Elvis, an IT professional passionate about providing innovative solutions to societal challenges.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>I am an experienced IT professional with a strong background in software development, problem-solving, and IT consulting. My interests include web development, cybersecurity, and cloud computing.</p>
+    <ul>
+      <li>Proficient in HTML, CSS, and JavaScript</li>
+      <li>Experience in IT project management</li>
+      <li>Strong analytical and communication skills</li>
+    </ul>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <h2>My Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Web Development</h3>
+        <p>Creating responsive and visually appealing websites tailored to your needs.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="service-card">
+        <h3>IT Consulting</h3>
+        <p>Providing expert advice to optimize your IT infrastructure and processes.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="service-card">
+        <h3>Cybersecurity Solutions</h3>
+        <p>Ensuring the safety and security of your digital assets.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <form action="mailto:johnelvisthuku@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Connect with me:</p>
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+    <a href="https://github.com" target="_blank">GitHub</a>
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <a href="https://wa.me/?text=Hello" target="_blank">WhatsApp</a>
+    <a href="https://www.youtube.com" target="_blank">YouTube</a>
+    <a href="https://www.pinterest.com" target="_blank">Pinterest</a>
+    <p>&copy; 2025 Elvis. All rights reserved.</p>
+  </footer>
+
+  <!-- External CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url(pexels-sebastian-palomino-933481-1875480\ \(1\).jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: lavender;
+      padding: 10px 20px;
+      color: black;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: lightblue;
+    }
+
+    .home-section {
+      text-align: center;
+      padding: 50px 20px;
+      color: white;
+    }
+
+    .about-section, .services-section, .contact-section {
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: lightblue;
+      color: white;
+    }
+
+    footer a {
+      color: #00aced;
+      text-decoration: none;
+    }
+  </style>
+  <button onclick="shareportfolio()">share my Portfolio</button>
+  <script>
+    function shareportfolio() {
+    if(navigator.share) {
+      navigator.share({
+        title: 'Elvis Portfolio',
+        text: 'Check out Elvis Portfolio',
+        url: 'https://elvisportfolio.com'
+      })
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+    } else {
+      alert('Web Share API not supported');
+    }
+</body>
+</html>

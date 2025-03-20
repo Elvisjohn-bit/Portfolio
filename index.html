@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elvis - Personal Portfolio</title>
+  <title>Elvis-John</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Top Navigation Bar -->
   <header>
     <nav class="navbar">
-      <h1>Elvis</h1>
+      <h1>Elvis-John</h1>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -64,15 +64,7 @@
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <h2>Contact Me</h2>
-    <form action="mailto:johnelvisthuku@gmail.com" method="post" enctype="text/plain">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
+      <p>If you are looking for IT solutions, feel free to reach out to me at<a href="gmail:johnelvisthuku@gmail.com" ><strong>johnelvisthuku@gmail.com</strong>.</p>
   </section>
 
   <!-- Footer -->
@@ -80,12 +72,6 @@
     <p>Connect with me:</p>
     <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
     <a href="https://github.com" target="_blank">GitHub</a>
-    <a href="https://twitter.com" target="_blank">Twitter</a>
-    <a href="https://www.facebook.com" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com" target="_blank">Instagram</a>
-    <a href="https://wa.me/?text=Hello" target="_blank">WhatsApp</a>
-    <a href="https://www.youtube.com" target="_blank">YouTube</a>
-    <a href="https://www.pinterest.com" target="_blank">Pinterest</a>
     <p>&copy; 2025 Elvis. All rights reserved.</p>
   </footer>
 
@@ -97,7 +83,7 @@
       padding: 0;
       background: url(pexels-sebastian-palomino-933481-1875480\ \(1\).jpg) no-repeat center center fixed;
       background-size: cover;
-      color: #333;
+      color: lightblue
     }
 
     .navbar {
@@ -169,21 +155,6 @@
     footer a {
       color: #00aced;
       text-decoration: none;
-    }
-  </style>
-  <button onclick="shareportfolio()">share my Portfolio</button>
-  <script>
-    function shareportfolio() {
-    if(navigator.share) {
-      navigator.share({
-        title: 'Elvis Portfolio',
-        text: 'Check out Elvis Portfolio',
-        url: 'https://elvisportfolio.com'
-      })
-      .then(() => console.log('Successful share'))
-      .catch((error) => console.log('Error sharing', error));
-    } else {
-      alert('Web Share API not supported');
     }
 </body>
 </html>
